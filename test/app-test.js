@@ -32,7 +32,6 @@ describe('app', function() {
       'config/karma-grunt.js',
       'config/mocha-grunt.js',
       'config/mocha-options.js',
-      'config/sizediff-grunt.js',
       'config/uglify-grunt.js',
       'config/webpack-grunt.js',
       'src/index.js',
