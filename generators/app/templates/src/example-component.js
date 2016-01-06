@@ -5,7 +5,7 @@
  * @description Example isomorphic-js component.
  *
  * @example
- * var <%= appClassName %> = require('<%= appName %>');
+ * var <%= appClassName %> = require('<%= npmName %>');
  * var <%= appInstanceName %> = new <%= appClassName %>();
  * console.log( <%= appInstanceName %>.exampleComponent.sayHello() );
  */

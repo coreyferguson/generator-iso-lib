@@ -8,7 +8,7 @@ var ExampleComponent = require('./example-component');
  * <%= appDescription %>
  *
  * @example
- * var <%= appClassName %> = require('<%= appName %>');
+ * var <%= appClassName %> = require('<%= npmName %>');
  * var <%= appInstanceName %> = new <%= appClassName %>();
  */
 function <%= appClassName %>() {

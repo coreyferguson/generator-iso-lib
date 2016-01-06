@@ -1,5 +1,5 @@
 {
-  "name": "<%= appName %>",
+  "name": "<%= npmName %>",
   "version": "0.1.0",
   "description": "<%= appDescription %>",
   "main": "src/index.js",

@@ -29,7 +29,7 @@ module.exports = generators.Base.extend({
       name: 'appName',
       message: 'Your library name:',
       default: 'test-iso-js',
-      store: true,
+      store: false,
       validate: function(input) {
         if (input !== null && input !== undefined &&
             input.match(/^[\w-]+$/)) {
@@ -43,10 +43,32 @@ module.exports = generators.Base.extend({
       name: 'appDescription',
       message: 'Short description:',
       default: 'Isomorphic JavaScript Library.',
-      store: true,
+      store: false,
       validate: function(input) {
         if (input !== null && input !== undefined && input !== '') return true;
         else return 'Description cannot be null or empty.';
+      }
+    }, {
+      type: 'confirm',
+      name: 'isNpmSameAsAppName',
+      message: 'Is the name in NPM registry the same as the app name?',
+      default: true,
+      store: false
+    }, {
+      type: 'input',
+      name: 'npmName',
+      message: 'Your preferred NPM module name:',
+      store: false,
+      when: function(answers) {
+        return !answers.isNpmSameAsAppName;
+      },
+      validate: function(input) {
+        if (input !== null && input !== undefined &&
+            input.match(/^[\/\@\w-]+$/)) {
+          return true;
+        } else {
+          return 'Name must only use lowercase letters, numbers and dashes: ^[a-z\-\d]+$';
+        }
       }
     }, {
       type: 'input',
@@ -69,6 +91,7 @@ module.exports = generators.Base.extend({
     }], function(answers) {
       this.appName = answers.appName;
       this.appDescription = answers.appDescription;
+      this.npmName = answers.npmName;
       this.authorName = answers.authorName;
       this.authorEmail = answers.authorEmail;
       done();
@@ -152,6 +175,7 @@ module.exports = generators.Base.extend({
       appClassName: s.classify(this.appName),
       appInstanceName: s.camelize(this.appName),
       appDescription: this.appDescription,
+      npmName: this.npmName || this.appName,
       authorName: this.authorName,
       authorEmail: this.authorEmail
     };

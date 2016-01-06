@@ -12,7 +12,7 @@
 Install to your project using npm:
 
 ```
-npm install <%= appName %> --save-dev
+npm install <%= npmName %> --save-dev
 ```
 
 Use it:
@@ -20,7 +20,7 @@ Use it:
 **TODO: Document example usage below**
 
 ```javascript
-var <%= appClassName %> = require('<%= appName %>');
+var <%= appClassName %> = require('<%= npmName %>');
 var <%= appInstanceName %> = new <%= appClassName %>();
 
 // TODO: Document example usage
