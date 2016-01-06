@@ -19,6 +19,8 @@ describe('app', function() {
     assert.file([
       'package.json',
       'Gruntfile.js',
+      'README.md',
+      'CONTRIBUTE.md',
       '.gitignore',
       '.jscsrc',
       'config/bump-grunt.js',
@@ -38,6 +40,7 @@ describe('app', function() {
       'src/example-component.js',
       'test/integration/support/globals.js',
       'test/integration/spec/example-component-test.js'
+      'dist/README.md',
     ]);
   });
 
