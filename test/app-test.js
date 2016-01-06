@@ -39,8 +39,8 @@ describe('app', function() {
       'src/index.js',
       'src/example-component.js',
       'test/integration/support/globals.js',
-      'test/integration/spec/example-component-test.js'
-      'dist/README.md',
+      'test/integration/spec/example-component-test.js',
+      'dist/README.md'
     ]);
   });
 
