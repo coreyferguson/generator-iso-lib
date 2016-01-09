@@ -1,6 +1,30 @@
 
 # Iso-Lib, Yeoman Generator
 
+## Summary
+
+Generates a new isomorhpic JavaScript library using [Yoeman](http://yeoman.io/).
+
+## Usage
+
+Install Yeoman and dependencies:
+
+```
+npm install -g yo bower grunt-cli gulp
+```
+
+Install this generator:
+
+```
+npm install -g generator-iso-lib
+```
+
+Generate a new project:
+
+```
+yo iso-lib
+```
+
 ## Features
 
 - Isomorphic (runs in browser and Node.js).
