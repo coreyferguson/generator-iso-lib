@@ -9,18 +9,26 @@ module.exports = {
   //////////////////////
 
   plugins: [
-    'karma-chrome-launcher',
-    'karma-coverage',
-    'karma-mocha',
-    'karma-webpack',
-    'karma-sourcemap-loader'
+    require('karma-chai'),
+    require('karma-chai-as-promised'),
+    require('karma-chai-sinon'),
+    require('karma-chrome-launcher'),
+    require('karma-coverage'),
+    require('karma-mocha'),
+    require('karma-sourcemap-loader'),
+    require('karma-webpack')
   ],
+  // order is important for frameworks
   frameworks: [
-    'mocha'
+    'mocha',
+    'chai-sinon',
+    'chai-as-promised',
+    'chai'
   ],
   files: [
-    'test/integration/support/globals.js',
-    'test/integration/spec/**/*.js'
+    'test/support/globals.js',
+    'test/integration/**/*.js',
+    'test/unit/**/*.js'
   ],
   exclude: [],
 

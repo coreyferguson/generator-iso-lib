@@ -38,8 +38,10 @@ describe('app', function() {
       'config/webpack-grunt.js',
       'src/index.js',
       'src/example-component.js',
-      'test/integration/support/globals.js',
-      'test/integration/spec/example-component-test.js',
+      'src/example-dependency.js',
+      'test/support/globals.js',
+      'test/integration/example-component-test.js',
+      'test/unit/example-component-test.js',
       'dist/README.md'
     ]);
   });
