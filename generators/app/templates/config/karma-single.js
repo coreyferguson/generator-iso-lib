@@ -12,8 +12,9 @@ module.exports = function(config) {
     ///////////////////
 
     preprocessors: {
-      'test/integration/spec/**/*.js': ['webpack'],
-      'test/integration/support/**/*.js': ['webpack']
+      'test/integration/**/*.js': ['webpack'],
+      'test/unit/**/*.js': ['webpack'],
+      'test/support/**/*.js': ['webpack']
     },
 
     /////////////

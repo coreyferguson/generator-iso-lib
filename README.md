@@ -1,6 +1,30 @@
 
 # Iso-Lib, Yeoman Generator
 
+## Summary
+
+Generates a new isomorhpic JavaScript library using [Yoeman](http://yeoman.io/).
+
+## Usage
+
+Install Yeoman and dependencies:
+
+```
+npm install -g yo bower grunt-cli gulp
+```
+
+Install this generator:
+
+```
+npm install -g generator-iso-lib
+```
+
+Generate a new project:
+
+```
+yo iso-lib
+```
+
 ## Features
 
 - Isomorphic (runs in browser and Node.js).
@@ -27,6 +51,7 @@ As a contributor ( [`devDependencies`][] )
 - [Mocha](https://www.npmjs.com/package/mocha)
 - [Chai](https://www.npmjs.com/package/chai)
 - [chai-as-promised](https://www.npmjs.com/package/chai-as-promised)
+- [Sinon](https://www.npmjs.com/package/sinon)
 - [istanbul](https://www.npmjs.com/package/istanbul-instrumenter-loader)
 - [grunt-bump](https://www.npmjs.com/package/grunt-bump)
 - [JSCS](https://www.npmjs.com/package/jscs)
@@ -70,11 +95,13 @@ $ tree
 │   ├── example-component.js   // example component
 │   └── index.js               // single-point-of-entry into library
 └── test
-    └── integration
-        ├── spec
-        │   └── example-component-test.js // example component test
-        └── support
-            └── globals.js     // common test setup
+    ├── integration
+    │   └── example-component-test.js // example integration test
+    ├── support                // common test setup
+    │   ├── globals.js
+    │   └── globals-mocha.js
+    └── unit
+        └── example-component-test.js // example unit test
 ```
 
 
