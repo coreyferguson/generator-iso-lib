@@ -1,1 +1,0 @@
-/home/corey/dev/projects/unit-testing/test/support/globals.js

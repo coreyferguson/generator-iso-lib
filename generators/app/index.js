@@ -150,9 +150,6 @@ module.exports = generators.Base.extend({
       'grunt-webpack',
       'istanbul-instrumenter-loader',
       'karma',
-      'karma-chai',
-      'karma-chai-as-promised',
-      'karma-chai-sinon',
       'karma-chrome-launcher',
       'karma-coverage',
       'karma-mocha',
@@ -161,8 +158,6 @@ module.exports = generators.Base.extend({
       'load-grunt-tasks',
       'lodash.merge',
       'mocha',
-      'sinon',
-      'sinon-chai',
       'webpack',
       'webpack-dev-server'
     ], {
