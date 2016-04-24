@@ -1,6 +1,13 @@
 
 # Iso-Lib, Yeoman Generator
 
+## Usage
+
+```bash
+npm install -g yo generator-iso-lib
+yo iso-lib
+```
+
 ## Features
 
 - Isomorphic (runs in browser and Node.js).
