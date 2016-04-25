@@ -1,75 +1,84 @@
-var fs = require('fs');
-var path = require('path');
 
-module.exports = {
-  basePath: '..',
+'use strict';
 
-  //////////////////////
-  // karma extensions //
-  //////////////////////
+module.exports = function(config) {
+  config.set({
 
-  plugins: [
-    require('karma-chai'),
-    require('karma-chai-as-promised'),
-    require('karma-chai-sinon'),
-    require('karma-chrome-launcher'),
-    require('karma-coverage'),
-    require('karma-mocha'),
-    require('karma-sourcemap-loader'),
-    require('karma-webpack')
-  ],
-  // order is important for frameworks
-  frameworks: [
-    'mocha',
-    'chai-sinon',
-    'chai-as-promised',
-    'chai'
-  ],
-  files: [
-    'test/support/globals.js',
-    'test/integration/**/*.js',
-    'test/unit/**/*.js'
-  ],
-  exclude: [],
+    basePath: '..',
 
-  //////////////////////////
-  // server configuration //
-  //////////////////////////
+    //////////////////////
+    // karma extensions //
+    //////////////////////
 
-  hostname: 'localhost',
-  protocol: 'http',
-  port: 9876,
+    // order is important for frameworks
+    frameworks: [
+      'mocha',
+      'chai-sinon',
+      'chai-as-promised',
+      'chai'
+    ],
+    files: [
+      'test/integration/**/*.js',
+      'test/unit/**/*.js'
+    ],
+    exclude: [],
 
-  ////////////////////////
-  // testing / coverage //
-  ////////////////////////
+    ///////////////////
+    // preprocessors //
+    ///////////////////
 
-  client: {
-    mocha: require('./mocha-options')
-  },
-  reporters: ['progress', 'coverage'],
-  coverageReporter: {
-    dir: 'coverage/',
-    reporters: [
-      { type: 'html', subdir: 'coverage-html' },
-      { type: 'text', subdir: '.', file: 'coverage-detail.txt' },
-      { type: 'text-summary', subdir: '.', file: 'coverage-summary.txt' }
-    ]
-  },
+    preprocessors: {
+      'test/integration/**/*.js': ['webpack', 'sourcemap'],
+      'test/unit/**/*.js': ['webpack', 'sourcemap'],
+      'test/support/**/*.js': ['webpack', 'sourcemap']
+    },
 
-  //////////
-  // misc //
-  //////////
+    /////////////
+    // webpack //
+    /////////////
 
-  colors: true,
-  autoWatch: true,
-  concurrency: Infinity,
-  webpackMiddleware: { noInfo: true },
+    webpack: require('./webpack'),
 
-  ///////////////
-  // launchers //
-  ///////////////
+    //////////////////////////
+    // server configuration //
+    //////////////////////////
 
-  browsers: ['Chrome']
+    hostname: 'localhost',
+    protocol: 'http',
+    port: 9876,
 
+    ////////////////////////
+    // testing / coverage //
+    ////////////////////////
+
+    client: {
+      mocha: require('./mocha')
+    },
+    reporters: ['progress', 'coverage'],
+    coverageReporter: {
+      dir: 'coverage/',
+      reporters: [
+        { type: 'html', subdir: 'coverage-html' },
+        { type: 'text', subdir: '.', file: 'coverage-detail.txt' },
+        { type: 'text-summary', subdir: '.', file: 'coverage-summary.txt' }
+      ]
+    },
+
+    //////////
+    // misc //
+    //////////
+
+    logLevel: config.LOG_INFO,
+    colors: true,
+    autoWatch: true,
+    concurrency: Infinity,
+    webpackMiddleware: { noInfo: true },
+
+    ///////////////
+    // launchers //
+    ///////////////
+
+    browsers: ['Chrome']
+
+  });
 };

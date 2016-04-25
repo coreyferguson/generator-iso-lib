@@ -1,10 +1,13 @@
-var ExampleComponent = require('../../src/example-component');
+
+'use strict';
+
+let ExampleComponent = require('../../src/example-component');
 
 describe('ExampleComponent unit tests', function() {
 
   it('should process name', function() {
-    var exampleComponent = new ExampleComponent();
-    var process = sinon.stub().returns('processed');
+    let exampleComponent = new ExampleComponent();
+    let process = sinon.stub().returns('processed');
     exampleComponent._exampleDependency.process = process;
     return expect(exampleComponent.sayHello('not processed').then(function(response) {
       return Promise.all([

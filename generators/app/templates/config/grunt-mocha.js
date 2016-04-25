@@ -1,9 +1,8 @@
 
 module.exports = {
-  options: require('./mocha-options'),
+  options: require('./mocha'),
   integration: {
     src: [
-      'test/support/globals.js',
       'test/support/globals-mocha.js',
       'test/integration/**/*.js',
       'test/unit/**/*.js'

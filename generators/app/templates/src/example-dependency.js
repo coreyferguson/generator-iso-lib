@@ -1,9 +1,13 @@
 
-function ExampleDependency() {
-}
+'use strict';
 
-ExampleDependency.prototype.process = function(name) {
-  return name.toLowerCase();
-};
+/**
+ * Example isomorphic-js dependency.
+ */
+class ExampleDependency {
+  process(name) {
+    return name.toLowerCase();
+  }
+}
 
 module.exports = ExampleDependency;

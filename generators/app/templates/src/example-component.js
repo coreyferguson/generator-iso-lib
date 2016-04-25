@@ -1,11 +1,11 @@
 
-var Promise = require('bluebird');
-var ExampleDependency = require('./example-dependency');
+'use strict';
+
+let Promise = require('bluebird');
+let ExampleDependency = require('./example-dependency');
 
 /**
- * @class
- * @constructor
- * @description Example isomorphic-js component.
+ * Example isomorphic-js component.
  *
  * @example
  * var <%= appClassName %> = require('<%= npmName %>');
@@ -14,19 +14,23 @@ var ExampleDependency = require('./example-dependency');
  *   console.log(response);
  * });
  */
-function ExampleComponent() {
-  this._exampleDependency = new ExampleDependency();
-}
+class ExampleComponent {
 
-/**
- * Returns a greeting message.
- * @param {string} [name=world] Name to use in greeting.
- * @returns {Promise.<string>} Greeting message.
- */
-ExampleComponent.prototype.sayHello = function(name) {
-  if (!name) name = 'world';
-  name = this._exampleDependency.process(name);
-  return Promise.resolve('Hello ' + name);
-};
+  constructor() {
+    this._exampleDependency = new ExampleDependency();
+  }
+
+  /**
+   * Returns a greeting message.
+   * @param {string} [name=world] Name to use in greeting.
+   * @returns {Promise.<string>} Greeting message.
+   */
+  sayHello(name) {
+    if (!name) name = 'world';
+    name = this._exampleDependency.process(name);
+    return Promise.resolve('Hello ' + name);
+  }
+
+}
 
 module.exports = ExampleComponent;

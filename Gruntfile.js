@@ -5,9 +5,9 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    bump: require('./config/bump-grunt'),
-    jscs: require('./config/jscs-grunt'),
-    mochaTest: require('./config/mocha-grunt')
+    bump: require('./config/grunt-bump'),
+    jscs: require('./config/grunt-jscs'),
+    mochaTest: require('./config/grunt-mocha')
   });
 
   grunt.registerTask('default', ['jscs', 'mochaTest']);

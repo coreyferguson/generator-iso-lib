@@ -1,23 +1,24 @@
 
-var ExampleComponent = require('./example-component');
+'use strict';
+
+let ExampleComponent = require('./example-component');
 
 /**
- * @class <%= appClassName %>
- * @constructor
- * @description
  * <%= appDescription %>
  *
  * @example
  * var <%= appClassName %> = require('<%= npmName %>');
  * var <%= appInstanceName %> = new <%= appClassName %>();
  */
-function <%= appClassName %>() {
+class <%= appClassName %> {
 
-  /**
-   * @instance
-   * @type {ExampleComponent}
-   */
-  this.exampleComponent = new ExampleComponent();
+  constructor() {
+    /**
+     * @instance
+     * @type {ExampleComponent}
+     */
+    this.exampleComponent = new ExampleComponent();
+  }
 
 }
 

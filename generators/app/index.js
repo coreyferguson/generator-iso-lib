@@ -135,6 +135,9 @@ module.exports = generators.Base.extend({
 
     // Save developer dependencies
     this.npmInstall([
+      'babel-core',
+      'babel-loader',
+      'babel-preset-es2015',
       'chai',
       'chai-as-promised',
       'grunt',
@@ -148,6 +151,7 @@ module.exports = generators.Base.extend({
       'grunt-mocha-test',
       'grunt-sizediff',
       'grunt-webpack',
+      'isparta-loader',
       'istanbul-instrumenter-loader',
       'karma',
       'karma-chai',

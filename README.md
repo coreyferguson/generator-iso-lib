@@ -49,19 +49,18 @@ $ tree
 ├── api
 │   └── index.html             // generated api from JSDocs
 ├── config                     // configuration files
-│   ├── bump-grunt.js
-│   ├── cat-grunt.js
-│   ├── clean-grunt.js
-│   ├── jscs-grunt.js
-│   ├── jsdoc-grunt.js
-│   ├── karma-continuous.js
-│   ├── karma-grunt.js
+│   ├── grunt-bump.js
+│   ├── grunt-cat.js
+│   ├── grunt-clean.js
+│   ├── grunt-jscs.js
+│   ├── grunt-jsdoc.js
+│   ├── grunt-karma.js
+│   ├── grunt-mocha.js
+│   ├── grunt-uglify.js
+│   ├── grunt-webpack.js
 │   ├── karma.js
-│   ├── karma-single.js
-│   ├── mocha-grunt.js
-│   ├── mocha-options.js
-│   ├── uglify-grunt.js
-│   └── webpack-grunt.js
+│   ├── mocha.js
+│   └── webpack.js
 ├── CONTRIBUTE.md              // how-to contribute to this library
 ├── coverage                   // testing code coverage
 │   ├── coverage-detail.txt
@@ -80,7 +79,6 @@ $ tree
     ├── integration
     │   └── example-component-test.js // example integration test
     ├── support
-    │   ├── globals.js
     │   └── globals-mocha.js
     └── unit
         ├── example-component-test.js // example unit test with mocking

@@ -5,15 +5,15 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    bump: require('./config/bump-grunt'),
-    cat: require('./config/cat-grunt'),
-    clean: require('./config/clean-grunt'),
-    jscs: require('./config/jscs-grunt'),
-    jsdoc: require('./config/jsdoc-grunt'),
-    karma: require('./config/karma-grunt'),
-    mochaTest: require('./config/mocha-grunt'),
-    uglify: require('./config/uglify-grunt'),
-    webpack: require('./config/webpack-grunt')
+    bump: require('./config/grunt-bump'),
+    cat: require('./config/grunt-cat'),
+    clean: require('./config/grunt-clean'),
+    jscs: require('./config/grunt-jscs'),
+    jsdoc: require('./config/grunt-jsdoc'),
+    karma: require('./config/grunt-karma'),
+    mochaTest: require('./config/grunt-mocha'),
+    uglify: require('./config/grunt-uglify'),
+    webpack: require('./config/grunt-webpack')
   });
 
   grunt.registerTask('default', ['jscs', 'test:single', 'build']);
