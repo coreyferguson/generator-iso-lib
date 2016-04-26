@@ -8,5 +8,6 @@ module.exports = {
   options: {
     config: '.jscsrc',
     verbose: true,
+    fix: true
   }
 };

@@ -6,6 +6,8 @@ module.exports = {
     'test/**/*.js'
   ],
   options: {
-    config: '.jscsrc'
+    config: '.jscsrc',
+    verbose: true,
+    fix: true
   }
 };
