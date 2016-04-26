@@ -28,9 +28,9 @@
   "author": "Corey Ferguson <corey.t.ferguson@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/coreyferguson/generator-isomorphic-js/issues"
+    "url": "https://github.com/coreyferguson/generator-iso-lib/issues"
   },
-  "homepage": "https://github.com/coreyferguson/generator-isomorphic-js#readme",
+  "homepage": "https://github.com/coreyferguson/generator-iso-lib#readme",
   "dependencies": {
     "underscore.string": "^3.2.2",
     "yeoman-generator": "^0.22.2"
