@@ -5,7 +5,7 @@
 
 <%= appDescription %>
 
-## Usage
+## Consumer Usage
 
 ### Node.js
 
@@ -37,6 +37,6 @@ Browser distribution files are checked into github with the source. See [Documen
 
 See [API Documentation]().
 
-## Contribute
+## Contributor Usage
 
 See [Contribution Documentation](./CONTRIBUTE.md).

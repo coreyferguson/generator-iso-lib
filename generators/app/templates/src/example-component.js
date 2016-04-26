@@ -1,7 +1,6 @@
 
 'use strict';
 
-let Promise = require('bluebird');
 let ExampleDependency = require('./example-dependency');
 
 /**

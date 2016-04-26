@@ -22,22 +22,24 @@ yo iso-lib
 
 As a consumer: ( [`dependencies`][] )
 
-- [superagent](https://www.npmjs.com/package/superagent)
-- [bluebird](https://www.npmjs.com/package/bluebird)
 - [platform](https://www.npmjs.com/package/platform)
+
+Add any other dependencies you need. Be sure to test it against Node.js
+and browser environments.
 
 As a contributor ( [`devDependencies`][] )
 
-- [Grunt](https://www.npmjs.com/package/grunt)
-- [Webpack](https://www.npmjs.com/package/webpack)
-- [Karma](https://www.npmjs.com/package/karma)
-- [Mocha](https://www.npmjs.com/package/mocha)
-- [Chai](https://www.npmjs.com/package/chai)
-- [chai-as-promised](https://www.npmjs.com/package/chai-as-promised)
-- [istanbul](https://www.npmjs.com/package/istanbul-instrumenter-loader)
-- [grunt-bump](https://www.npmjs.com/package/grunt-bump)
-- [JSCS](https://www.npmjs.com/package/jscs)
-- [JSDoc](https://www.npmjs.com/package/jsdoc)
+- [Grunt](http://gruntjs.com)
+- [Webpack](http://webpack.github.io/docs/what-is-webpack.html)
+- [Babel](https://babeljs.io)
+- [Karma](https://karma-runner.github.io/0.13/intro/how-it-works.html)
+- [Mocha](https://mochajs.org)
+- [Chai](http://chaijs.com)
+- [chai-as-promised](https://github.com/domenic/chai-as-promised)
+- [istanbul](https://github.com/gotwarlost/istanbul)
+- [grunt-bump](https://github.com/vojtajina/grunt-bump)
+- [JSCS](http://jscs.info)
+- [JSDoc](http://usejsdoc.org)
 
 [`dependencies`]: https://docs.npmjs.com/files/package.json#dependencies
 [`devDependencies`]: https://docs.npmjs.com/files/package.json#devdependencies

@@ -126,9 +126,7 @@ module.exports = generators.Base.extend({
 
     // Save dependencies
     this.npmInstall([
-      'bluebird',
-      'platform',
-      'superagent'
+      'platform'
     ], {
       save: true
     });

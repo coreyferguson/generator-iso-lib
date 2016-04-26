@@ -2,20 +2,25 @@
 'use strict';
 
 let webpackConfig = require('./webpack');
+let overrideConfig = {
+  entry: './src/index.js',
+  // TODO: Define your library dependencies here:
+  // https://webpack.github.io/docs/library-and-externals.html
+  externals: {
+  }
+};
 
 module.exports = {
   'dist-amd': Object.assign({
-    entry: './src/index.js',
     output: {
       filename: './dist/<%= appName %>-amd.js',
       libraryTarget: 'amd'
     }
-  }, webpackConfig),
+  }, webpackConfig, overrideConfig),
   'dist-this': Object.assign({
-    entry: './src/index.js',
     output: {
       filename: './dist/<%= appName %>-this.js',
       libraryTarget: 'this'
     }
-  }, webpackConfig)
+  }, webpackConfig, overrideConfig)
 };

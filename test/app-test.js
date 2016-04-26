@@ -34,6 +34,7 @@ describe('app', function() {
       'config/grunt-webpack.js',
       'config/karma.js',
       'config/mocha.js',
+      'config/webpack.js',
       'src/index.js',
       'src/example-component.js',
       'src/example-dependency.js',
