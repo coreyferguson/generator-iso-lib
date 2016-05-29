@@ -19,6 +19,8 @@ npm install -g grunt-cli
 
 #### Download <%= appClassName %> and install local dependencies:
 
+**TODO: Update github link below**
+
 ```
 git clone git@github.com:organization/<%= appName %>.git
 cd <%= appName %>
@@ -35,10 +37,19 @@ grunt
 
 ## Continuous Testing
 
-Test suites can be run automatically as changes are made to the source or test scripts. This can be executed with the `test:continuous` grunt task:
+Test suites can be run automatically as changes are made to the source or test scripts.
+
+For continuous testing in the browser:
 
 ```
-grunt test:continuous
+grunt test:browser
 ```
 
-Continuous testing does not perform other build operations such as compiling the `dist/*` bundles. Be sure to run a full `grunt` build before pushing to git.
+For continuous testing in node.js:
+
+```
+grunt test:node
+```
+
+> Continuous testing does not perform other build operations such as compiling
+the `dist/*` bundles. Be sure to run a full `grunt` build before pushing to git.

@@ -4,6 +4,7 @@
 let webpackConfig = require('./webpack');
 let overrideConfig = {
   entry: './src/index.js',
+
   // TODO: Define your library dependencies here:
   // https://webpack.github.io/docs/library-and-externals.html
   externals: {

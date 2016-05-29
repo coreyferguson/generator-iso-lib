@@ -13,12 +13,28 @@ module.exports = function(grunt) {
     karma: require('./config/grunt-karma'),
     mochaTest: require('./config/grunt-mocha'),
     uglify: require('./config/grunt-uglify'),
+    watch: require('./config/grunt-watch'),
     webpack: require('./config/grunt-webpack')
   });
 
+  // test and build
   grunt.registerTask('default', ['jscs', 'test:single', 'build']);
+
+  // build distribution files
   grunt.registerTask('build', ['clean:dist', 'webpack', 'uglify']);
-  grunt.registerTask('test:single', ['clean:build', 'mochaTest', 'karma:single', 'cat:coverageSummary']);
-  grunt.registerTask('test:continuous', ['clean:build', 'karma:continuous']);
+
+  // test once against browser
+  grunt.registerTask('test', [
+    'clean:build',
+    'mochaTest',
+    'karma:single',
+    'cat:coverageSummary'
+  ]);
+
+  // test continuously with browser
+  grunt.registerTask('test:browser', ['clean:build', 'karma:continuous']);
+
+  // test continuously with node.js
+  grunt.registerTask('test:node', ['clean:build', 'watch']);
 
 };

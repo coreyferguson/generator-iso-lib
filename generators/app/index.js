@@ -143,6 +143,7 @@ module.exports = generators.Base.extend({
       'grunt-cat',
       'grunt-contrib-clean',
       'grunt-contrib-uglify',
+      'grunt-contrib-watch',
       'grunt-jscs',
       'grunt-jsdoc',
       'grunt-karma',
