@@ -87,4 +87,6 @@ $ tree
         └── example-dependency-test.js // example unit test
 ```
 
+## Examples
 
+Examples of provider and consumers can be seen [here](https://github.com/coreyferguson/example-iso-js).
