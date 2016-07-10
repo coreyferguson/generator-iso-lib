@@ -46,45 +46,70 @@ As a contributor ( [`devDependencies`][] )
 
 ## Project structure
 
+### Documentation
+
 ```
-$ tree
-├── api
-│   └── index.html             // generated api from JSDocs
-├── config                     // configuration files
-│   ├── grunt-bump.js
-│   ├── grunt-cat.js
-│   ├── grunt-clean.js
-│   ├── grunt-jscs.js
-│   ├── grunt-jsdoc.js
-│   ├── grunt-karma.js
-│   ├── grunt-mocha.js
-│   ├── grunt-uglify.js
-│   ├── grunt-webpack.js
-│   ├── karma.js
-│   ├── mocha.js
-│   └── webpack.js
-├── CONTRIBUTE.md              // how-to contribute to this library
-├── coverage                   // testing code coverage
-│   ├── coverage-detail.txt
-│   ├── coverage-html
-│   │   └── index.html
-│   └── coverage-summary.txt
-├── dist                       // distribution files for browser
-│   └── README.md
-├── Gruntfile.js               // build configuration with `grunt`
-├── package.json               // npm details and dependencies
-├── README.md                  // how-to use this library as a consumer
+├── CONTRIBUTE.md  // how-to contribute to this library
+├── README.md      // how-to use this library as a consumer
+└── api
+    └── index.html // generated api from JSDocs
+```
+
+### Source
+
+```
 ├── src
-│   ├── example-component.js   // example component
-│   └── index.js               // single-point-of-entry into library
-└── test
-    ├── integration
-    │   └── example-component-test.js // example integration test
-    ├── support
-    │   └── globals-mocha.js
-    └── unit
-        ├── example-component-test.js // example unit test with mocking
-        └── example-dependency-test.js // example unit test
+│   ├── ExampleComponent.js  // example component
+│   ├── ExampleDependency.js // example dependency to show test mocking
+│   └── YourLibraryName.js   // single-point-of-entry into library
+├── Gruntfile.js             // build configuration with `grunt`
+├── package.json             // npm details and dependencies
+└── config                   // configuration files
+    ├── grunt
+    │   ├── babel.js
+    │   ├── bump.js
+    │   ├── cat.js
+    │   ├── clean.js
+    │   ├── jscs.js
+    │   ├── jsdoc.js
+    │   ├── karma.js
+    │   ├── mochaTest.js
+    │   ├── uglify.js
+    │   ├── watch.js
+    │   └── webpack.js
+    ├── karma.js
+    ├── mocha.js
+    └── webpack.js
+```
+
+### Testing
+
+```
+├── test
+│   ├── integration
+│   │   └── ExampleComponentTest.js   // example integration test
+│   ├── support
+│   │   └── TestUtils.js              // exports `expect` and `sinon`
+│   └── unit
+│       ├── ExampleComponentTest.js   // example unit test with mocking
+│       └── ExampleDependencyTest.js  // example unit test
+└── coverage // testing code coverage
+    ├── coverage-detail.txt
+    ├── coverage-html
+    │   └── index.html
+    └── coverage-summary.txt
+```
+
+### Distribution
+
+```
+└── dist // distribution files published to npm
+    ├── your-library-name-amd.js
+    ├── your-library-name-amd.min.js
+    ├── your-library-name-commonjs2.js
+    ├── your-library-name-commonjs2.min.js
+    ├── your-library-name-this.js
+    └── your-library-name-this.min.js
 ```
 
 ## Examples
