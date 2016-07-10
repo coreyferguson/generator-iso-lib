@@ -29,7 +29,10 @@ var <%= appInstanceName %> = new <%= appClassName %>();
 
 ### Browser
 
-Browser distribution files are checked into github with the source. See [Document bundles](./dist/README.md) for details on which bundle is right for you.
+Distribution files are provided for different [library targets](https://webpack.github.io/docs/configuration.html#output-librarytarget).
+
+- `./dist/<%= appName %>-amd.js` & `./dist/<%= appName %>-amd.min.js`: For AMD libraries like [RequireJS](http://requirejs.org/). `define(...)`.
+- `./dist/<%= appName %>-this.js` & `./dist/<%= appName %>-this.min.js`: Uses global context. `window.<%= appClassName %> = ...`
 
 ## API
 

@@ -4,10 +4,8 @@
 /**
  * Example isomorphic-js dependency.
  */
-class ExampleDependency {
+export default class ExampleDependency {
   process(name) {
     return name.toLowerCase();
   }
 }
-
-module.exports = ExampleDependency;

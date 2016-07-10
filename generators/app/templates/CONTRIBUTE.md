@@ -42,14 +42,14 @@ Test suites can be run automatically as changes are made to the source or test s
 For continuous testing in the browser:
 
 ```
-grunt test:browser
+grunt testBrowser
 ```
 
-For continuous testing in node.js:
+For continuous testing in Node.js:
 
 ```
-grunt test:node
+grunt testNode
 ```
 
 > Continuous testing does not perform other build operations such as compiling
-the `dist/*` bundles. Be sure to run a full `grunt` build before pushing to git.
+the `dist/*` bundles. Be sure to run a full `grunt` build before pushing to npm.

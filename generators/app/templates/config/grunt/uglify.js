@@ -7,5 +7,9 @@ module.exports = {
   this: {
     src: 'dist/<%= appName %>-this.js',
     dest: 'dist/<%= appName %>-this.min.js'
+  },
+  commonjs2: {
+    src: 'dist/<%= appName %>-commonjs2.js',
+    dest: 'dist/<%= appName %>-commonjs2.min.js'
   }
 };

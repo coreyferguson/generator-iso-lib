@@ -13,7 +13,19 @@ module.exports = {
       loader: 'isparta-loader',
       test: /\.js$/,
       exclude: /(test|node_modules)\//
-    }]
+    }],
+
+    // https://github.com/webpack/webpack/issues/304#issuecomment-155822898
+    noParse: [/node_modules\/sinon\//]
+
+  },
+  resolve: {
+    alias: {
+
+      // https://github.com/webpack/webpack/issues/304#issuecomment-155837677
+      sinon: 'sinon/pkg/sinon.js'
+
+    }
   },
   isparta: {
     embedSource: true,

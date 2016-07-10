@@ -1,40 +1,39 @@
 
+var path = require('path');
+
 module.exports = function(grunt) {
 
+  // load all grunt tasks matching the ['grunt-*', '@*/grunt-*'] patterns
   require('load-grunt-tasks')(grunt);
 
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    bump: require('./config/grunt-bump'),
-    cat: require('./config/grunt-cat'),
-    clean: require('./config/grunt-clean'),
-    jscs: require('./config/grunt-jscs'),
-    jsdoc: require('./config/grunt-jsdoc'),
-    karma: require('./config/grunt-karma'),
-    mochaTest: require('./config/grunt-mocha'),
-    uglify: require('./config/grunt-uglify'),
-    watch: require('./config/grunt-watch'),
-    webpack: require('./config/grunt-webpack')
+  // load all grunt configurations matching 'config/grunt/**.js'
+  require('load-grunt-config')(grunt, {
+    configPath: path.join(__dirname, 'config/grunt'),
   });
 
-  // test and build
-  grunt.registerTask('default', ['jscs', 'test:single', 'build']);
+  // test and build distribution files
+  grunt.registerTask('default', ['jscs', 'test', 'dist']);
 
-  // build distribution files
-  grunt.registerTask('build', ['clean:dist', 'webpack', 'uglify']);
-
-  // test once against browser
+  // test on node and browser and report coverage
   grunt.registerTask('test', [
-    'clean:build',
-    'mochaTest',
-    'karma:single',
+    'testNodeSingle',
+    'testBrowserSingle',
     'cat:coverageSummary'
   ]);
 
+  // test once on node
+  grunt.registerTask('testNodeSingle', ['clean:build', 'babel', 'mochaTest']);
+
+  // test once on browser
+  grunt.registerTask('testBrowserSingle', ['karma:single']);
+
   // test continuously with browser
-  grunt.registerTask('test:browser', ['clean:build', 'karma:continuous']);
+  grunt.registerTask('testBrowser', ['clean:build', 'karma:continuous']);
 
   // test continuously with node.js
-  grunt.registerTask('test:node', ['clean:build', 'watch']);
+  grunt.registerTask('testNode', ['clean:build', 'watch']);
+
+  // build distribution files
+  grunt.registerTask('dist', ['clean:dist', 'webpack', 'uglify']);
 
 };

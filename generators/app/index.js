@@ -28,7 +28,7 @@ module.exports = generators.Base.extend({
       type: 'input',
       name: 'appName',
       message: 'Your library name:',
-      default: 'test-iso-js',
+      default: 'test-iso-lib',
       store: false,
       validate: function(input) {
         if (input !== null && input !== undefined &&
@@ -116,6 +116,7 @@ module.exports = generators.Base.extend({
     this.fs.copyTpl(this.templatePath('**/*'), this.destinationPath(), model);
     this.fs.move(this.destinationPath('_dot_gitignore'), this.destinationPath('.gitignore'));
     this.fs.move(this.destinationPath('_dot_jscsrc'), this.destinationPath('.jscsrc'));
+    this.fs.move(this.destinationPath('src/IsoLib.js'), this.destinationPath('src/' + model.appClassName + '.js'))
   },
 
   /**
@@ -139,6 +140,7 @@ module.exports = generators.Base.extend({
       'chai',
       'chai-as-promised',
       'grunt',
+      'grunt-babel@^6.0.0',
       'grunt-bump',
       'grunt-cat',
       'grunt-contrib-clean',
@@ -152,15 +154,13 @@ module.exports = generators.Base.extend({
       'grunt-webpack',
       'isparta-loader',
       'istanbul-instrumenter-loader',
-      'karma',
-      'karma-chai',
-      'karma-chai-as-promised',
-      'karma-chai-sinon',
+      'karma@^0.13.22',
       'karma-chrome-launcher',
       'karma-coverage',
       'karma-mocha',
       'karma-sourcemap-loader',
       'karma-webpack',
+      'load-grunt-config@^0.19.2',
       'load-grunt-tasks',
       'lodash.merge',
       'mocha',

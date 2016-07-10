@@ -1,25 +1,4 @@
 
-'use strict';
-
-let ExampleComponent = require('./example-component');
-
-/**
- * <%= appDescription %>
- *
- * @example
- * var <%= appClassName %> = require('<%= npmName %>');
- * var <%= appInstanceName %> = new <%= appClassName %>();
- */
-class <%= appClassName %> {
-
-  constructor() {
-    /**
-     * @instance
-     * @type {ExampleComponent}
-     */
-    this.exampleComponent = new ExampleComponent();
-  }
-
-}
-
-module.exports = <%= appClassName %>;
+// convert ES6 `default export` to ES5 CommonJS
+const <%= appClassName %> = require('./<%= appClassName %>');
+module.exports = <%= appClassName %>.default;

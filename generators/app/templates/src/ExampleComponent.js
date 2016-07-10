@@ -1,7 +1,7 @@
 
 'use strict';
 
-let ExampleDependency = require('./example-dependency');
+import ExampleDependency from './ExampleDependency';
 
 /**
  * Example isomorphic-js component.
@@ -13,7 +13,7 @@ let ExampleDependency = require('./example-dependency');
  *   console.log(response);
  * });
  */
-class ExampleComponent {
+export default class ExampleComponent {
 
   constructor() {
     this._exampleDependency = new ExampleDependency();
@@ -31,5 +31,3 @@ class ExampleComponent {
   }
 
 }
-
-module.exports = ExampleComponent;

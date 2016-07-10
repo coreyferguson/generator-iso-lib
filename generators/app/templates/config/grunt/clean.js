@@ -1,5 +1,5 @@
 
 module.exports = {
   dist: ['dist/**/*.js'],
-  build: ['coverage/', 'api']
+  build: ['build/', 'coverage/', 'api/']
 };

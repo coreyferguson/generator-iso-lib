@@ -12,10 +12,7 @@ module.exports = function(config) {
 
     // order is important for frameworks
     frameworks: [
-      'mocha',
-      'chai-sinon',
-      'chai-as-promised',
-      'chai'
+      'mocha'
     ],
     files: [
       'test/integration/**/*.js',

@@ -2,7 +2,7 @@
 module.exports = {
   dev: {
     files: ['src/**/*.js', 'test/**/*.js'],
-    tasks: ['jscs', 'mochaTest'],
+    tasks: ['jscs', 'testNodeSingle'],
     options: {
       atBegin: true
     }

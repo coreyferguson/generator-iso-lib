@@ -3,7 +3,7 @@ module.exports = {
   options: {
     configFile: 'config/karma.js',
     client: {
-      mocha: require('./mocha')
+      mocha: require('../mocha')
     }
   },
   continuous: {

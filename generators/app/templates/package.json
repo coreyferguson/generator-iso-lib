@@ -2,7 +2,7 @@
   "name": "<%= npmName %>",
   "version": "0.1.0",
   "description": "<%= appDescription %>",
-  "main": "src/index.js",
+  "main": "dist/<%= appName %>-commonjs2.min.js",
   "scripts": {
     "test": "grunt test:single"
   },
