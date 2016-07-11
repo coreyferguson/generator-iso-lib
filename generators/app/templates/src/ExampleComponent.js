@@ -4,6 +4,8 @@
 import ExampleDependency from './ExampleDependency';
 
 /**
+ * @class ExampleComponent
+ * @description
  * Example isomorphic-js component.
  *
  * @example

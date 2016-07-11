@@ -4,6 +4,8 @@
 import ExampleComponent from './ExampleComponent';
 
 /**
+ * @class <%= appClassName %>
+ * @description
  * <%= appDescription %>
  *
  * @example
