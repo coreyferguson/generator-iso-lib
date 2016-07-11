@@ -44,7 +44,8 @@ describe('app', function() {
       'test/integration/ExampleComponentTest.js',
       'test/unit/ExampleComponentTest.js',
       'test/unit/ExampleDependencyTest.js',
-      'test/support/TestUtils.js'
+      'test/support/TestUtils.js',
+      'dist/README.md'
     ]);
   });
 
