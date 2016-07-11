@@ -1,6 +1,6 @@
 {
   "name": "generator-iso-lib",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Yeoman generator for an isomorphic JavaScript library.",
   "main": "src/index.js",
   "scripts": {
