@@ -127,47 +127,47 @@ module.exports = generators.Base.extend({
 
     // Save dependencies
     this.npmInstall([
-      'platform'
+      'platform@^1.3.1'
     ], {
       save: true
     });
 
     // Save developer dependencies
     this.npmInstall([
-      'babel-core',
-      'babel-loader',
-      'babel-preset-es2015',
-      'chai',
-      'chai-as-promised',
-      'grunt',
+      'babel-core@^6.10.4',
+      'babel-loader@^6.2.4',
+      'babel-preset-es2015@^6.9.0',
+      'chai@^3.5.0',
+      'chai-as-promised@^5.3.0',
+      'grunt@^1.0.1',
       'grunt-babel@^6.0.0',
-      'grunt-bump',
-      'grunt-cat',
-      'grunt-contrib-clean',
-      'grunt-contrib-uglify',
-      'grunt-contrib-watch',
-      'grunt-jscs',
-      'grunt-jsdoc',
-      'grunt-karma',
-      'grunt-mocha-test',
-      'grunt-sizediff',
-      'grunt-webpack',
-      'isparta-loader',
-      'istanbul-instrumenter-loader',
+      'grunt-bump@^0.8.0',
+      'grunt-cat@^0.1.2',
+      'grunt-contrib-clean@^1.0.0',
+      'grunt-contrib-uglify@^1.0.1',
+      'grunt-contrib-watch@^1.0.0',
+      'grunt-jscs@^3.0.1',
+      'grunt-jsdoc@^2.1.0',
+      'grunt-karma@^2.0.0',
+      'grunt-mocha-test@^0.12.7',
+      'grunt-sizediff@^1.2.0',
+      'grunt-webpack@^1.0.11',
+      'isparta-loader@^2.0.0',
+      'istanbul-instrumenter-loader@^0.2.0',
       'karma@^0.13.22',
-      'karma-chrome-launcher',
-      'karma-coverage',
-      'karma-mocha',
-      'karma-sourcemap-loader',
-      'karma-webpack',
+      'karma-chrome-launcher@^1.0.1',
+      'karma-coverage@^1.1.0',
+      'karma-mocha@^1.1.1',
+      'karma-sourcemap-loader@^0.3.7',
+      'karma-webpack@^1.7.0',
       'load-grunt-config@^0.19.2',
-      'load-grunt-tasks',
-      'lodash.merge',
-      'mocha',
-      'sinon',
-      'sinon-chai',
-      'webpack',
-      'webpack-dev-server'
+      'load-grunt-tasks@^3.5.0',
+      'lodash.merge@^4.4.0',
+      'mocha@^2.5.3',
+      'sinon@^1.17.4',
+      'sinon-chai@^2.8.0',
+      'webpack@^1.13.1',
+      'webpack-dev-server@^1.14.1'
     ], {
       saveDev: true
     });
