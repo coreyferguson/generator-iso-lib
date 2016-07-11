@@ -116,7 +116,7 @@ module.exports = generators.Base.extend({
     this.fs.copyTpl(this.templatePath('**/*'), this.destinationPath(), model);
     this.fs.move(this.destinationPath('_dot_gitignore'), this.destinationPath('.gitignore'));
     this.fs.move(this.destinationPath('_dot_jscsrc'), this.destinationPath('.jscsrc'));
-    this.fs.move(this.destinationPath('src/IsoLib.js'), this.destinationPath('src/' + model.appClassName + '.js'))
+    this.fs.move(this.destinationPath('src/_IsoLib.js'), this.destinationPath('src/' + model.appClassName + '.js'));
   },
 
   /**
