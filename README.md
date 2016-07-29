@@ -10,7 +10,7 @@ yo iso-lib
 
 ## Features
 
-- Isomorphic (runs in browser and Node.js).
+- Universal / Isomorphic (runs in browser and Node.js).
 - Bundled into a single dependency for browser.
 - Integration testing on Node.js and browser.
 - Code coverage.

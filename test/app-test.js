@@ -8,7 +8,7 @@ describe('app', function() {
     helpers.run(path.join(__dirname, '../generators/app'))
       .withPrompts({
         appName: 'iso-lib',
-        appDescription: 'Isomorphic JavaScript library.',
+        appDescription: 'Universal JavaScript library.',
         authorName: 'Corey Ferguson',
         authorEmail: 'corey.t.ferguson@gmail.com'
       })
