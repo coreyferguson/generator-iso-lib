@@ -4,7 +4,7 @@
   "description": "<%= appDescription %>",
   "main": "dist/<%= appName %>-commonjs2.min.js",
   "scripts": {
-    "test": "grunt test:single"
+    "test": "grunt test"
   },
   "keywords": [
     "JavaScript",
