@@ -29,11 +29,27 @@ module.exports = {
     }
   }),
 
-  'dist-commonjs2': merge({}, defaultConfig, overrideConfig, {
+  'dist-node': merge({}, defaultConfig, overrideConfig, {
     output: {
-      filename: './dist/<%= appName %>-commonjs2.js',
+      filename: './dist/<%= appName %>-node.js',
       libraryTarget: 'commonjs2'
-    }
+    },
+    externals: getNodeExternals()
   }),
 
 };
+
+/**
+ * Regular dependencies should be excluded from Webpack processing.
+ * Fetch the list of dependencies from package.json and format
+ * for Webpack externals configuration.
+ */
+function getNodeExternals() {
+  const dependencies = require('../../package.json').dependencies;
+  let externals = {};
+  for (const dependency in dependencies) {
+    externals[dependency] = dependency;
+  }
+  return externals;
+}
+
